@@ -10,7 +10,7 @@ targets = ["not_recom", "recommend", "very_recom", "priority", "spec_prior"]
 features = headlines[:-1]
 label = headlines[-1]
 
-df = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/nursery/nursery.data', names=headers)
+df = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/nursery/nursery.data', names=headlines)
 df.head()
 
 df.parents = df.parents.astype("category", categories=["usual", "pretentious", "great_pret"], ordered=True)
